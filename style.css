@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #3D3D3D 50%, #5B5B5B 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+.sidebar,
+.navbar,
+.le-contenu,
+.mon-offcanvas,
+.ligne-utilisateur1,
+.mode-visuel,
+.bg-kanban,
+.bg-attente,
+.bg-compte {
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    backdrop-filter: blur(4px);
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.offcanvas-backdrop {
+    background: transparent !important;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-y: auto;
+    z-index: 99;
+    border-radius: 0;
+}
+
+.navbar {
+    top: 0;
+    z-index: 98;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 80px;
+}
+
+.le-contenu {
+    border-radius: .50em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.bg-orange,
+.point-orange,
+.trait-orange {
+    background: #FF7339 !important;
+}
+
+
+.menu-hover:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+
+
+.trait-orange-claire {
+    background: #FEBFA5;
+}
+
+.trait-orange-claire1 {
+    background: #FEDFD2;
+}
+
+.trait-orange,
+.trait-orange-claire,
+.trait-orange-claire1 {
+    width: 60px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.point-orange {
+    width: 10px;
+    height: 10px;
+    top: -4px;
+    right: -4px;
+}
+
+.text-taille {
+    font-size: 14px;
+}
+
+.bg-lorem,
+.bg-cendre {
+    background: rgba(170, 170, 170, 0.5);
+    border-radius: 4px;
+}
+
+.mon-offcanvas {
+    width: 280px !important;
+}
+
+.les-input input,
+.input-container input {
+    background: transparent !important;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.les-input input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cerle-blanc {
+    width: 40px;
+    height: 40px;
+    color: #FF7339;
+}
+
+.liste-utilisateurs {
+    overflow: auto;
+    max-height: 700px;
+    max-width: 100%;
+}
+
+.table-scroll {
+    min-width: 768px;
+}
+
+.ligne-utilisateur,
+.ligne-utilisateur1 {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+/* Onglet par défaut */
+.nav-tabs .reception,
+.nav-tabs .kanban {
+    color: white;
+    border: none;
+    background: transparent;
+}
+
+/* Onglet actif — gradient activé */
+.nav-tabs .reception.active,
+.nav-tabs .kanban.active {
+    background: linear-gradient(90deg, #d0d0d0 0%, #888888 50%, #d0d0d0 100%);
+    color: white !important;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nav-tabs .nav-link {
+    border: none !important;
+}
+
+.nav-tabs .nav-link.active {
+    border: none !important;
+}
+
+.contenu-scroll {
+    overflow: auto;
+    max-height: 250px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.le-contenu-scrollable {
+    min-width: 1024px;
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    color: #FF7339;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-shrink: 0;
+    margin-left: -20px;
+    
+}
+.bubble:first-child {
+  margin-left: 0; /* pas de superposition pour le 1er */
+}
+
+.bubble span {
+  position: relative;
+  z-index: 1;
+}
+.point div {
+    width: 6px;
+    height: 6px;
+    opacity: 0.95;
+}
+.kanban-scroll,
+.compte-scroll{
+overflow: auto;
+    max-height: 770px;
+    max-width: 100%;
+}
+.kanban-scrollable,
+.compte-scrollable{
+min-width: 1024px;
+}
+
+.bg-card{
+    background: rgba(255, 255, 255, 0.18);
+}
+.bg-orange-transparant{
+    background: #685D57;
+    color: #FF7339;
+    border: #FF7339 solid 1px;
+}
+
+/* Survol */
+/* .nav-tabs .reception:hover {
+  color: #ccc;
+  border: none;
+  background: transparent !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    .navbar h1 {
+        font-size: 1rem !important;
+    }
+
+    .text-taille {
+        font-size: 0.75rem;
+    }
+
+    .les-icons i {
+        font-size: 1.2rem !important;
+    }
+
+    .point-orange {
+        top: -4px;
+        right: -4px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .navbar h1 {
+        font-size: 1.3rem !important;
+    }
+
+    .point-orange {
+        top: -4px;
+        right: -4px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .main-wrapper {
+        margin-left: 250px;
+    }
+}
