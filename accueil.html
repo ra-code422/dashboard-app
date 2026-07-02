@@ -87,7 +87,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
                         <a href="accueil.html"
-                            class="nav-link text-white fw-semibold fs-5 bg-orange rounded-2 menu-hover">Dashboard ></a>
+                            class="nav-link text-white fw-semibold fs-5 bg-orange-sidebar rounded-2 menu-hover">Dashboard ></a>
                     </li>
                     <li class="nav-item mb-3">
                         <a href="utilisateur.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Utilisateurs
@@ -121,7 +121,7 @@
                     <ul class="nav flex-column">
                         <li class="nav-item mb-3">
                             <a href="accueil.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover bg-orange rounded-2">Dashboard ></a>
+                                class="nav-link text-white fw-semibold menu-hover bg-orange-sidebar rounded-2">Dashboard ></a>
                         </li>
                         <li class="nav-item mb-3">
                             <a href="utilisateur.html" data-bs-dismiss="offcanvas"
@@ -150,7 +150,7 @@
         <!-- ZONE DROITE : navbar + contenu -->
         <div class="main-wrapper mt-3 ms-2 min-vh-100 flex-grow-1">
             <!-- NAVBAR -->
-            <nav class="navbar sticky-top px-3   py-4 rounded-3">
+            <nav id="navbar-dashboard" class="navbar sticky-top px-3   py-4 rounded-3">
                 <button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -174,7 +174,7 @@
                 </div>
             </nav>
             <!-- CONTENU PRINCIPAL -->
-            <main class="le-contenu p-3 mt-3 flex-grow-1">
+            <main class="le-contenu p-3 mt-3 flex-grow-1" data-bs-spy="scroll" data-bs-target="#navbar-dashboard" data-bs-smooth-scroll="true" tabindex="0">
                 <div class="row">
                     <div class="col-12 col-lg-6 mb-3">
                         <div>
