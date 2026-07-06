@@ -10,15 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-    <div class="container-fluid d-flex justify-content-between align-items-start gap-3">
+    <div class="container-fluid d-flex justify-content-between align-items-start gap-3 ">
         <!-- SIDEBAR DESKTOP -->
         <div>
-            <aside class="sidebar d-none d-lg-flex flex-column  rounded-3 mt-3 ms-2 p-3">
+            <aside class="sidebar d-none d-lg-flex flex-column  rounded-3 m-3 p-4">
                 <div>
                     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -86,26 +86,27 @@
                 </div>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
-                        <a href="accueil.html" class="nav-link text-white fw-semibold fs-5  menu-hover">Dashboard ></a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a href="utilisateur.html"
-                            class="nav-link text-white fw-semibold fs-5 bg-orange rounded-2 menu-hover menu-hover">Utilisateurs
+                        <a href="accueil.html"
+                            class="nav-link text-white fw-semibold fs-5 bg-orange-sidebar rounded-2 menu-hover">Dashboard
                             ></a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a href="messagerie.html" class="nav-link text-white fw-semibold fs-5  menu-hover">Messagerie
+                        <a href="utilisateur.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Utilisateurs
                             ></a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a href="taches.html" class="nav-link text-white fw-semibold fs-5  ">Tâches ></a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a href="calendrier.html" class="nav-link text-white fw-semibold fs-5  menu-hover">Calendrier
+                        <a href="messagerie.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Messagerie
                             ></a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a href="comptes.html" class="nav-link text-white fw-semibold fs-5  menu-hover">Comptes ></a>
+                        <a href="taches.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Tâches ></a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="calendrier.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Calendrier
+                            ></a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="comptes.html" class="nav-link text-white fw-semibold fs-5 menu-hover">Comptes ></a>
                     </li>
                 </ul>
             </aside>
@@ -121,20 +122,20 @@
                     <ul class="nav flex-column">
                         <li class="nav-item mb-3">
                             <a href="accueil.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover ">Dashboard ></a>
-                        </li>
-                        <li class="nav-item mb-3">
-                            <a href="utilisateur.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover bg-orange rounded-2">Utilisateurs
+                                class="nav-link text-white fw-semibold menu-hover bg-orange-sidebar rounded-2">Dashboard
                                 ></a>
                         </li>
                         <li class="nav-item mb-3">
+                            <a href="utilisateur.html" data-bs-dismiss="offcanvas"
+                                class="nav-link text-white fw-semibold menu-hover">Utilisateurs ></a>
+                        </li>
+                        <li class="nav-item mb-3">
                             <a href="messagerie.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover ">Messagerie ></a>
+                                class="nav-link text-white fw-semibold menu-hover">Messagerie ></a>
                         </li>
                         <li class="nav-item mb-3">
                             <a href="taches.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover ">Tâches ></a>
+                                class="nav-link text-white fw-semibold menu-hover">Tâches ></a>
                         </li>
                         <li class="nav-item mb-3">
                             <a href="calendrier.html" data-bs-dismiss="offcanvas"
@@ -142,16 +143,16 @@
                         </li>
                         <li class="nav-item mb-3">
                             <a href="comptes.html" data-bs-dismiss="offcanvas"
-                                class="nav-link text-white fw-semibold menu-hover ">Comptes ></a>
+                                class="nav-link text-white fw-semibold menu-hover">Comptes ></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- ZONE DROITE : navbar + contenu -->
-        <div class="main-wrapper mt-3 ms-2 min-vh-100 flex-grow-1">
-            <!-- NAVBAR -->
-            <nav class="navbar sticky-top px-3   py-4 rounded-3">
+        <div class="flex-grow-1">
+            <!--  SCROLLSPY -->
+            <nav id="navbar-dashboard" class="navbar px-3 my-3 rounded shadow-sm sticky-top ">
                 <button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -174,356 +175,320 @@
                     </div>
                 </div>
             </nav>
-            <!-- CONTENU PRINCIPAL -->
-            <main class="le-contenu p-3 mt-3 flex-grow-1 text-white">
-                <h6 class="">Choisissez un des filtres suivant pour modifier la liste</h6>
-                <div class="row g-3 mb-3">
-                    <div class="col-12 col-md-4">
-                        <div class="les-input border border-1 rounded-2 ">
-                            <input type="text" placeholder="Tout les roles "
-                                class="bg-input border-0 rounded-2 p-1 text-white w-100">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="les-input border border-1 rounded-2 ">
-                            <input type="text" placeholder=" Tous status "
-                                class="bg-input border-0 rounded-2 p-1 text-white w-100">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="les-input border border-1 rounded-2 ">
-                            <input type="text" placeholder="Tout les régions "
-                                class="bg-input border-0 rounded-2 p-1 text-white w-100">
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-3 justify-content-end  mb-3">
-                    <div class="col-12 col-md-auto">
-                        <div class="les-input border border-1 rounded-2 ">
-                            <input type="text" placeholder="Rechercher un utilisateur"
-                                class="bg-input border-0 text-white px-3 py-2 form-control bg-transparent w-100 shadow-none">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-auto">
-                        <div class="les-input  rounded-2 bg-cendre ">
-                            <button class="btn bg-cendre text-white px-3 py-2 rounded-2">
-                                Exporter
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-auto">
-                        <div class="les-input  rounded-2 bg-orange ">
-                            <button class="btn bg-orange text-white px-3 py-2 rounded-2 fw-bold">
-                                + Ajouter un utilisateur
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="liste-utilisateurs mt-4 ">
-                    <div class="table-scroll">
-                        <div class="ligne-utilisateur  mb-3 p-4 border-bottom border-secondary-subtle">
-                            <div>
-                                <input type="checkbox">
-                            </div>
-                            <p class="fw-bolder mb-0 ">Utilisateur</p>
-                            <p class="fw-bolder mb-0 ">Status</p>
-                            <p class="fw-bolder mb-0 ">Roles</p>
-                            <p class="fw-bolder mb-0 ">Actions</p>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
 
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
+            <main data-bs-spy="scroll" data-bs-target="#navbar-dashboard" data-bs-smooth-scroll="true"
+                class="scrollspy-example " tabindex="0" style="height:800px; overflow-y:auto;">
 
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
+                <!--  contenu  -->
+
+                <section id="statistique" class="mb-5">
+
+                    <div class="card le-contenu  text-white ">
+
+                        <div class="card-body">
+
+                            <h6 class="">Choisissez un des filtres suivant pour modifier la liste</h6>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-md-4">
+                                    <div class="les-input border border-1 rounded-2 ">
+                                        <input type="text" placeholder="Tout les roles "
+                                            class="bg-input border-0 rounded-2 p-1 text-white w-100">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="les-input border border-1 rounded-2 ">
+                                        <input type="text" placeholder=" Tous status "
+                                            class="bg-input border-0 rounded-2 p-1 text-white w-100">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="les-input border border-1 rounded-2 ">
+                                        <input type="text" placeholder="Tout les régions "
+                                            class="bg-input border-0 rounded-2 p-1 text-white w-100">
+                                    </div>
                                 </div>
                             </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
+                            <div class="row g-3 justify-content-end  mb-3">
+                                <div class="col-12 col-md-auto">
+                                    <div class="les-input border border-1 rounded-2 ">
+                                        <input type="text" placeholder="Rechercher un utilisateur"
+                                            class="bg-input border-0 text-white px-3 py-2 form-control bg-transparent w-100 shadow-none">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="les-input  rounded-2 bg-cendre ">
+                                        <button class="btn bg-cendre text-white px-3 py-2 rounded-2">
+                                            Exporter
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="les-input  rounded-2 bg-orange ">
+                                        <button class="btn bg-orange text-white px-3 py-2 rounded-2 fw-bold">
+                                            + Ajouter un utilisateur
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="liste-utilisateurs mt-4 ">
+                                <div class="table-scroll">
+                                    <div class="ligne-utilisateur mb-3 p-4 border-bottom border-secondary-subtle">
+                                        <div class="entete-checkbox">
+                                            <input type="checkbox">
+                                        </div>
+                                        <p class="fw-bolder mb-0 bloc-user">Utilisateur</p>
+                                        <p class="fw-bolder mb-0 bloc-info">Status</p>
+                                        <p class="fw-bolder mb-0 bloc-info">Roles</p>
+                                        <p class="fw-bolder mb-0 bloc-actions">Actions</p>
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
 
-                            <div>Administrateur</div>
+                                        <input type="checkbox">
 
-                            <div>Inactive</div>
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
 
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
+                                        <div class="bloc-info">Administrateur</div>
 
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
+                                        <div class="bloc-info">Inactive</div>
 
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="ligne-utilisateur1 rounded-2 mb-2">
+
+                                        <input type="checkbox">
+
+                                        <div class="d-flex align-items-center gap-2 bloc-user">
+                                            <div
+                                                class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
+                                                AS
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Adminou Sani</h6>
+                                                <small>adminou@mail.com</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="bloc-info">Administrateur</div>
+
+                                        <div class="bloc-info">Inactive</div>
+
+                                        <div class="bloc-actions">
+                                            <i class="bi bi-pen fs-4"></i>
+                                            <i class="bi bi-trash fs-4"></i>
+                                            <i class="bi bi-three-dots-vertical fs-4"></i>
+                                        </div>
+
+                                    </div>
                                 </div>
+
                             </div>
 
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
                         </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
 
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
-                        <div class="ligne-utilisateur1 p-4 mb-3 rounded-2">
-                            <div class="grand-checkbox">
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="d-flex align-items-center gap-3">
-                                <div
-                                    class="cerle-blanc bg-white d-flex justify-content-center align-items-center rounded-circle fw-bolder fs-5">
-                                    AS</div>
-
-                                <div>
-                                    <h6 class="mb-0 ">Adminou Sani</h6>
-                                    <small>adminou@mail.com</small>
-                                </div>
-                            </div>
-
-                            <div>Administrateur</div>
-
-                            <div>Inactive</div>
-
-                            <div class="">
-                                <i class="bi bi-pen fs-4"></i>
-                                <i class="bi bi-trash fs-4"></i>
-                                <i class="bi bi-three-dots-vertical fs-4"></i>
-                            </div>
-                        </div>
                     </div>
 
-                </div>
+                </section>
 
             </main>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
