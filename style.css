@@ -8,7 +8,8 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
-.flex-grow-1{
+
+.flex-grow-1 {
     min-width: 0 !important;
 }
 
@@ -62,10 +63,12 @@ body {
     max-width: 450px;
     padding: 2em;
 }
-.le-contenu svg{
-    width:300px;
-    max-width:100%;
+
+.le-contenu svg {
+    width: 300px;
+    max-width: 100%;
 }
+
 .bg-orange {
     background-color: #FF7339;
     transform: translateY(-2px);
@@ -76,6 +79,7 @@ body {
     background-color: #e65f24;
     box-shadow: 0 8px 20px rgba(255, 115, 57, 0.4);
 }
+
 .offcanvas-backdrop {
     background: transparent !important;
 }
@@ -84,7 +88,7 @@ body {
     position: sticky;
     top: 0;
     align-self: flex-start;
-     border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     height: 100vh;
 }
 
@@ -100,6 +104,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
 
 }
+
 .bg-orange-sidebar,
 .point-orange,
 .trait-orange {
@@ -119,7 +124,7 @@ body {
 }
 
 .trait-orange-claire1 {
-    background: #FEDFD2 ;
+    background: #FEDFD2;
 }
 
 .trait-orange,
@@ -127,7 +132,7 @@ body {
 .trait-orange-claire1 {
     width: 60px;
     height: 20px;
-    
+
 }
 
 .point-orange {
@@ -186,6 +191,7 @@ body {
     align-items: center;
     gap: 15px;
 }
+
 .ligne-utilisateur {
     display: flex;
     flex-wrap: wrap;
@@ -196,17 +202,21 @@ body {
 .entete-checkbox {
     flex: 0 0 auto;
 }
+
 .ligne-utilisateur1 {
     display: flex;
-    flex-wrap: wrap;      /*  ça passe à la ligne tout seul */
+    flex-wrap: wrap;
+    /*  ça passe à la ligne tout seul */
     align-items: center;
     gap: 16px;
     padding: 16px;
 }
 
 .bloc-user {
-    flex: 1 1 200px;      /* prend de la place, mais jamais moins de 200px */
-    min-width: 0;         /* autorise le texte à se réduire au lieu de déborder */
+    flex: 1 1 200px;
+    /* prend de la place, mais jamais moins de 200px */
+    min-width: 0;
+    /* autorise le texte à se réduire au lieu de déborder */
 }
 
 .bloc-user h6,
@@ -217,14 +227,16 @@ body {
 }
 
 .bloc-info {
-    flex: 1 1 120px;      /* chaque info (Roles, Status) prend au moins 120px */
+    flex: 1 1 120px;
+    /* chaque info (Roles, Status) prend au moins 120px */
 }
 
 .bloc-actions {
     display: flex;
     gap: 10px;
-    margin-left: auto;    /* pousse les icônes à droite quand il y a la place */
-    
+    margin-left: auto;
+    /* pousse les icônes à droite quand il y a la place */
+
 }
 
 .le-contenu svg {
@@ -276,60 +288,58 @@ body {
     position: relative;
     flex-shrink: 0;
     margin-left: -20px;
-    
+
 }
+
 .bubble:first-child {
-  margin-left: 0; /* pas de superposition pour le 1er */
+    margin-left: 0;
+    /* pas de superposition pour le 1er */
 }
 
 .bubble span {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
+
 .point div {
     width: 6px;
     height: 6px;
     opacity: 0.95;
 }
+
 .kanban-scroll,
-.compte-scroll{
-overflow: auto;
+.compte-scroll {
+    overflow: auto;
     max-height: 770px;
     max-width: 100%;
 }
+
 .kanban-scrollable,
-.compte-scrollable{
-max-width: 100%;
+.compte-scrollable {
+    max-width: 100%;
 }
 
-.bg-card{
+.bg-card {
     background: rgba(255, 255, 255, 0.18);
 }
-.bg-orange-transparant{
+
+.bg-orange-transparant {
     background: #685D57;
     color: #FF7339;
     border: #FF7339 solid 1px;
 }
 
+svg path {
+    transition: fill 0.2s ease, transform 0.2s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+svg path:hover {
+    fill:#FEBFA5;
+    transform: scale(1.02);
+    cursor: pointer;
+}
 @media (max-width: 576px) {
     .navbar h1 {
         font-size: 1rem !important;
@@ -360,5 +370,3 @@ max-width: 100%;
     }
 
 }
-
-
